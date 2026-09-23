@@ -1,0 +1,6 @@
+{
+  "name": "Release",
+  "description": "Publish a semantic-versioned GitHub release on every merge, using the shared Basis release workflow.",
+  "iconName": "tag",
+  "categories": ["Continuous integration"]
+}
