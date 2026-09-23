@@ -1,0 +1,23 @@
+name: Release
+
+# Organization workflow template. Choose it from Actions -> New workflow to
+# publish a semantic-versioned GitHub release on every merge to the default
+# branch.
+#
+# The version logic and release creation live in the shared Basis workflow,
+# tracked at @main so shared-workflow updates apply without a per-repo uptake.
+
+on:
+  push:
+    branches: [$default-branch]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    name: Tag and publish a versioned release
+    permissions:
+      contents: write
+    uses: TroyAlford/basis/.github/workflows/release.yml@main
